@@ -1,7 +1,6 @@
-package edu.ncsu.csc326.coffeemaker.expections;
+package edu.ncsu.csc326.coffeemaker.exceptions;
 
 import edu.ncsu.csc326.coffeemaker.Recipe;
-import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
 import org.junit.Assert;
 import org.junit.Test;

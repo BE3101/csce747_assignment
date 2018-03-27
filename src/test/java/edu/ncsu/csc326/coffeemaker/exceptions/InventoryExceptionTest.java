@@ -1,7 +1,6 @@
-package edu.ncsu.csc326.coffeemaker.expections;
+package edu.ncsu.csc326.coffeemaker.exceptions;
 
 import edu.ncsu.csc326.coffeemaker.Inventory;
-import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 
 import org.junit.Assert;
 import org.junit.Test;
