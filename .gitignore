@@ -48,3 +48,6 @@ fabric.properties
 
 # Mac Files
 .DS_Store
+
+#Compiled files
+target/
