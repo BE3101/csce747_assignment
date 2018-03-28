@@ -1,8 +1,8 @@
 package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
-
 import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,6 +15,7 @@ public class InventoryTest {
     public static void setup() {
         recipe = new Recipe();
         try {
+            recipe.setName("Tasty");
             recipe.setAmtCoffee("3");
             recipe.setAmtChocolate("1");
             recipe.setAmtMilk("2");
@@ -671,6 +672,9 @@ public class InventoryTest {
 
     /* toString Tests */
     @Test
+    /**
+     * Test the toString representation of the Inventory.
+     */
     public void testToString() {
         String expectedString = "Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n";
         Inventory i = new Inventory();
