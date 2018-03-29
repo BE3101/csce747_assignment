@@ -14,12 +14,12 @@ public class RecipeTest {
     public void testDefaultRecipeConstructor() {
         Recipe r = new Recipe();
 
-        Assert.assertEquals("RecipeTest - validating Name: ", "", r.getName() );
-        Assert.assertEquals("RecipeTest - validating Price: ", 0, r.getPrice() );
-        Assert.assertEquals("RecipeTest - validating amtCoffee: ", 0, r.getAmtCoffee() );
-        Assert.assertEquals("RecipeTest - validating amtMilk: ", 0, r.getAmtMilk() );
-        Assert.assertEquals("RecipeTest - validating amtSugar: ", 0, r.getAmtSugar() );
-        Assert.assertEquals("RecipeTest - validating amtChocolate: ", 0, r.getAmtChocolate() );
+        Assert.assertEquals("RecipeTest - validating Name: 1", "", r.getName() );
+        Assert.assertEquals("RecipeTest - validating Price: 2", 0, r.getPrice() );
+        Assert.assertEquals("RecipeTest - validating amtCoffee: 3", 0, r.getAmtCoffee() );
+        Assert.assertEquals("RecipeTest - validating amtMilk: 4", 0, r.getAmtMilk() );
+        Assert.assertEquals("RecipeTest - validating amtSugar: 5", 0, r.getAmtSugar() );
+        Assert.assertEquals("RecipeTest - validating amtChocolate: 6", 0, r.getAmtChocolate() );
     }
 
     /* setAmtChocolate Tests */
@@ -35,7 +35,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtChocolate: ", 3, r.getAmtChocolate());
+            Assert.assertEquals("RecipeTest - validating setAmtChocolate: 1", 3, r.getAmtChocolate());
         }
     }
 
@@ -47,13 +47,13 @@ public class RecipeTest {
         Recipe r = new Recipe();
         try {
             r.setAmtChocolate("5");
-            Assert.assertEquals("RecipeTest - validating setAmtChocolate: ", 5, r.getAmtChocolate());
+            Assert.assertEquals("RecipeTest - validating setAmtChocolate: 1", 5, r.getAmtChocolate());
             r.setAmtChocolate("0");
         } catch (RecipeException e) {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtChocolate: ", 0, r.getAmtChocolate());
+            Assert.assertEquals("RecipeTest - validating setAmtChocolate: 2", 0, r.getAmtChocolate());
         }
     }
 
@@ -67,7 +67,7 @@ public class RecipeTest {
             r.setAmtChocolate("-5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -82,7 +82,7 @@ public class RecipeTest {
             r.setAmtChocolate("0.5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -97,7 +97,7 @@ public class RecipeTest {
             r.setAmtChocolate("yummy");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -115,7 +115,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating getAmtChocolate: ", 7, r.getAmtChocolate());
+            Assert.assertEquals("RecipeTest - validating getAmtChocolate: 1", 7, r.getAmtChocolate());
         }
     }
 
@@ -132,7 +132,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtCoffee: ", 3, r.getAmtCoffee());
+            Assert.assertEquals("RecipeTest - validating setAmtCoffee: 1", 3, r.getAmtCoffee());
         }
     }
 
@@ -144,13 +144,13 @@ public class RecipeTest {
         Recipe r = new Recipe();
         try {
             r.setAmtCoffee("5");
-            Assert.assertEquals("RecipeTest - validating setAmtCoffee: ", 5, r.getAmtCoffee());
+            Assert.assertEquals("RecipeTest - validating setAmtCoffee: 1", 5, r.getAmtCoffee());
             r.setAmtCoffee("0");
         } catch (RecipeException e) {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtCoffee: ", 0, r.getAmtCoffee());
+            Assert.assertEquals("RecipeTest - validating setAmtCoffee: 2", 0, r.getAmtCoffee());
         }
     }
 
@@ -164,7 +164,7 @@ public class RecipeTest {
             r.setAmtCoffee("-5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -179,7 +179,7 @@ public class RecipeTest {
             r.setAmtCoffee("0.5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -194,7 +194,7 @@ public class RecipeTest {
             r.setAmtCoffee("yummy");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -212,7 +212,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating getAmtCoffee: ", 7, r.getAmtCoffee());
+            Assert.assertEquals("RecipeTest - validating getAmtCoffee: 1", 7, r.getAmtCoffee());
         }
     }
 
@@ -229,7 +229,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtMilk: ", 3, r.getAmtMilk());
+            Assert.assertEquals("RecipeTest - validating setAmtMilk: 1", 3, r.getAmtMilk());
         }
     }
 
@@ -241,13 +241,13 @@ public class RecipeTest {
         Recipe r = new Recipe();
         try {
             r.setAmtMilk("5");
-            Assert.assertEquals("RecipeTest - validating setAmtMilk: ", 5, r.getAmtMilk());
+            Assert.assertEquals("RecipeTest - validating setAmtMilk: 1", 5, r.getAmtMilk());
             r.setAmtMilk("0");
         } catch (RecipeException e) {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtMilk: ", 0, r.getAmtMilk());
+            Assert.assertEquals("RecipeTest - validating setAmtMilk: 2", 0, r.getAmtMilk());
         }
     }
 
@@ -261,7 +261,7 @@ public class RecipeTest {
             r.setAmtMilk("-5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -276,7 +276,7 @@ public class RecipeTest {
             r.setAmtMilk("0.5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -291,7 +291,7 @@ public class RecipeTest {
             r.setAmtMilk("yummy");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -309,7 +309,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating getAmtMilk: ", 7, r.getAmtMilk());
+            Assert.assertEquals("RecipeTest - validating getAmtMilk: 1", 7, r.getAmtMilk());
         }
     }
 
@@ -326,7 +326,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtSugar: ", 3, r.getAmtSugar());
+            Assert.assertEquals("RecipeTest - validating setAmtSugar: 1", 3, r.getAmtSugar());
         }
     }
 
@@ -338,13 +338,13 @@ public class RecipeTest {
         Recipe r = new Recipe();
         try {
             r.setAmtSugar("5");
-            Assert.assertEquals("RecipeTest - validating setAmtSugar: ", 5, r.getAmtSugar());
+            Assert.assertEquals("RecipeTest - validating setAmtSugar: 1", 5, r.getAmtSugar());
             r.setAmtSugar("0");
         } catch (RecipeException e) {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setAmtSugar: ", 0, r.getAmtSugar());
+            Assert.assertEquals("RecipeTest - validating setAmtSugar: 2", 0, r.getAmtSugar());
         }
     }
 
@@ -358,7 +358,7 @@ public class RecipeTest {
             r.setAmtSugar("-5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -373,7 +373,7 @@ public class RecipeTest {
             r.setAmtSugar("0.5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -388,7 +388,7 @@ public class RecipeTest {
             r.setAmtSugar("yummy");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -406,7 +406,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating getAmtSugar: ", 7, r.getAmtSugar());
+            Assert.assertEquals("RecipeTest - validating getAmtSugar: 1", 7, r.getAmtSugar());
         }
     }
 
@@ -419,9 +419,9 @@ public class RecipeTest {
     public void testSetNameNonNull() {
         Recipe r = new Recipe();
         r.setName("Biscuits");
-        Assert.assertEquals("RecipeTest - validating setName: ", "Biscuits", r.getName());
+        Assert.assertEquals("RecipeTest - validating setName: 1", "Biscuits", r.getName());
         r.setName("Cookies");
-        Assert.assertEquals("RecipeTest - validating setName: ", "Cookies", r.getName());
+        Assert.assertEquals("RecipeTest - validating setName: 1", "Cookies", r.getName());
     }
 
     @Test
@@ -431,9 +431,9 @@ public class RecipeTest {
     public void testSetNameNull() {
         Recipe r = new Recipe();
         r.setName("Cookies");
-        Assert.assertEquals("RecipeTest - validating setName: ", "Cookies", r.getName());
+        Assert.assertEquals("RecipeTest - validating setName: 1", "Cookies", r.getName());
         r.setName(null);
-        Assert.assertEquals("RecipeTest - validating setName: ", "Cookies", r.getName());
+        Assert.assertEquals("RecipeTest - validating setName: 2", "Cookies", r.getName());
     }
 
     /* getName Tests*/
@@ -444,7 +444,7 @@ public class RecipeTest {
     public void testGetName() {
         Recipe r = new Recipe();
         r.setName("Cookies");
-        Assert.assertEquals("RecipeTest - validating getName: ", "Cookies", r.getName());
+        Assert.assertEquals("RecipeTest - validating getName: 1", "Cookies", r.getName());
     }
 
     /* setPrice Tests */
@@ -460,7 +460,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setPrice: ", 3, r.getPrice());
+            Assert.assertEquals("RecipeTest - validating setPrice: 1", 3, r.getPrice());
         }
     }
 
@@ -472,13 +472,13 @@ public class RecipeTest {
         Recipe r = new Recipe();
         try {
             r.setPrice("5");
-            Assert.assertEquals("RecipeTest - validating setPrice: ", 5, r.getPrice());
+            Assert.assertEquals("RecipeTest - validating setPrice: 1", 5, r.getPrice());
             r.setPrice("0");
         } catch (RecipeException e) {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating setPrice: ", 0, r.getPrice());
+            Assert.assertEquals("RecipeTest - validating setPrice: 2", 0, r.getPrice());
         }
     }
 
@@ -492,7 +492,7 @@ public class RecipeTest {
             r.setPrice("-5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Price must be a positive integer", e.getMessage());
         }
     }
@@ -507,7 +507,7 @@ public class RecipeTest {
             r.setPrice("0.5");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Price must be a positive integer", e.getMessage());
         }
     }
@@ -522,7 +522,7 @@ public class RecipeTest {
             r.setPrice("yummy");
             Assert.fail("No exception was thrown!");
         } catch (RecipeException e) {
-            Assert.assertEquals( "Validating Recipe Exception: ",
+            Assert.assertEquals( "Validating Recipe Exception: 1",
                     "Price must be a positive integer", e.getMessage());
         }
     }
@@ -540,7 +540,7 @@ public class RecipeTest {
             System.out.println( e.getMessage() );
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating getPrice: ", 7, r.getPrice());
+            Assert.assertEquals("RecipeTest - validating getPrice: 1", 7, r.getPrice());
         }
     }
 
@@ -552,7 +552,7 @@ public class RecipeTest {
     public void testToString() {
         Recipe r = new Recipe();
         r.setName("Candy");
-        Assert.assertEquals("RecipeTest - validating toString: ", r.getName(), r.toString());
+        Assert.assertEquals("RecipeTest - validating toString: 1", r.getName(), r.toString());
     }
 
     /* hashCode Tests */
@@ -573,7 +573,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("RecipeTest - validating hashCode: ", 1684024471, r.hashCode());
+            Assert.assertEquals("RecipeTest - validating hashCode: 1", 1684024471, r.hashCode());
         }
     }
 
@@ -595,7 +595,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertTrue("RecipeTest - validating equals", r.equals(r));
+            Assert.assertTrue("RecipeTest - validating equals: 1", r.equals(r));
         }
     }
 
@@ -616,7 +616,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertFalse("RecipeTest - validating equals", r.equals(null));
+            Assert.assertFalse("RecipeTest - validating equals: 1", r.equals(null));
         }
     }
 
@@ -637,7 +637,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertFalse("RecipeTest - validating equals", r.equals("This should fail!"));
+            Assert.assertFalse("RecipeTest - validating equals: 1", r.equals("This should fail!"));
         }
     }
 
@@ -666,7 +666,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertFalse("RecipeTest - validating equals", r1.equals(r2));
+            Assert.assertFalse("RecipeTest - validating equals: 1", r1.equals(r2));
         }
     }
 
@@ -695,7 +695,7 @@ public class RecipeTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertTrue("RecipeTest - validating equals", r1.equals(r2));
+            Assert.assertTrue("RecipeTest - validating equals: 1", r1.equals(r2));
         }
     }
 }

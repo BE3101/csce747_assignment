@@ -36,10 +36,10 @@ public class InventoryTest {
     public void testDefaultInventoryConstructor() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating Coffee: ", default_inventory, i.getCoffee() );
-        Assert.assertEquals("InventoryTest - validating Milk: ", default_inventory, i.getMilk() );
-        Assert.assertEquals("InventoryTest - validating Sugar: ", default_inventory, i.getSugar() );
-        Assert.assertEquals("InventoryTest - validating Chocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating Coffee: 1", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating Milk: 2", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating Sugar: 3", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating Chocolate: 4", default_inventory, i.getChocolate() );
     }
 
     /* getChocolate Tests */
@@ -50,7 +50,7 @@ public class InventoryTest {
     public void testGetChocolate() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating getChocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating getChocolate: 1", default_inventory, i.getChocolate() );
     }
 
     /* setChocolate Tests */
@@ -61,9 +61,9 @@ public class InventoryTest {
     public void testSetChocolatePosValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 1", default_inventory, i.getChocolate() );
         i.setChocolate(5);
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", 5, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 2", 5, i.getChocolate() );
     }
 
     @Test
@@ -73,9 +73,9 @@ public class InventoryTest {
     public void testSetChocolateNegValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 1", default_inventory, i.getChocolate() );
         i.setChocolate(-3);
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 2", default_inventory, i.getChocolate() );
     }
 
     @Test
@@ -85,9 +85,9 @@ public class InventoryTest {
     public void testSetChocolateZeroValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", default_inventory, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 1", default_inventory, i.getChocolate() );
         i.setChocolate(0);
-        Assert.assertEquals("InventoryTest - validating setChocolate: ", 0, i.getChocolate() );
+        Assert.assertEquals("InventoryTest - validating setChocolate: 2", 0, i.getChocolate() );
     }
 
     /* addChocolate Tests */
@@ -103,7 +103,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addChocolate: ", default_inventory + 7, i.getChocolate());
+            Assert.assertEquals("InventoryTest - validating addChocolate: 1", default_inventory + 7, i.getChocolate());
         }
     }
 
@@ -117,7 +117,7 @@ public class InventoryTest {
             i.addChocolate("-7");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addChocolate: ",
+            Assert.assertEquals("InventoryTest - validating addChocolate: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -134,7 +134,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addChocolate: ", default_inventory, i.getChocolate());
+            Assert.assertEquals("InventoryTest - validating addChocolate: 1", default_inventory, i.getChocolate());
         }
     }
 
@@ -148,7 +148,7 @@ public class InventoryTest {
             i.addChocolate("7.3");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addChocolate: ",
+            Assert.assertEquals("InventoryTest - validating addChocolate: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -163,7 +163,7 @@ public class InventoryTest {
             i.addChocolate("Interesting");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addChocolate: ",
+            Assert.assertEquals("InventoryTest - validating addChocolate: 1",
                     "Units of chocolate must be a positive integer", e.getMessage());
         }
     }
@@ -176,7 +176,7 @@ public class InventoryTest {
     public void testGetCoffee() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating getCoffee: ", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating getCoffee: 1", default_inventory, i.getCoffee() );
     }
 
     /* setCoffee Tests */
@@ -187,9 +187,9 @@ public class InventoryTest {
     public void testSetCoffeePosValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 1", default_inventory, i.getCoffee() );
         i.setCoffee(5);
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", 5, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 2", 5, i.getCoffee() );
     }
 
     @Test
@@ -199,9 +199,9 @@ public class InventoryTest {
     public void testSetCoffeeNegValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 1", default_inventory, i.getCoffee() );
         i.setCoffee(-3);
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 2", default_inventory, i.getCoffee() );
     }
 
     @Test
@@ -211,9 +211,9 @@ public class InventoryTest {
     public void testSetCoffeeZeroValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", default_inventory, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 1", default_inventory, i.getCoffee() );
         i.setCoffee(0);
-        Assert.assertEquals("InventoryTest - validating setCoffee: ", 0, i.getCoffee() );
+        Assert.assertEquals("InventoryTest - validating setCoffee: 2", 0, i.getCoffee() );
     }
 
     /* addCoffee Tests */
@@ -229,7 +229,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addCoffee: ", default_inventory + 7, i.getCoffee());
+            Assert.assertEquals("InventoryTest - validating addCoffee: 1", default_inventory + 7, i.getCoffee());
         }
     }
 
@@ -243,7 +243,7 @@ public class InventoryTest {
             i.addCoffee("-7");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addCoffee: ",
+            Assert.assertEquals("InventoryTest - validating addCoffee: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -260,7 +260,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addCoffee: ", default_inventory, i.getCoffee());
+            Assert.assertEquals("InventoryTest - validating addCoffee: 1", default_inventory, i.getCoffee());
         }
     }
 
@@ -274,7 +274,7 @@ public class InventoryTest {
             i.addCoffee("7.3");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addCoffee: ",
+            Assert.assertEquals("InventoryTest - validating addCoffee: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -289,7 +289,7 @@ public class InventoryTest {
             i.addCoffee("Interesting");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addCoffee: ",
+            Assert.assertEquals("InventoryTest - validating addCoffee: 1",
                     "Units of coffee must be a positive integer", e.getMessage());
         }
     }
@@ -302,7 +302,7 @@ public class InventoryTest {
     public void testGetMilk() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating getMilk: ", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating getMilk: 1", default_inventory, i.getMilk() );
     }
 
     /* setMilk Tests */
@@ -313,9 +313,9 @@ public class InventoryTest {
     public void testSetMilkPosValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setMilk: ", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 1", default_inventory, i.getMilk() );
         i.setMilk(5);
-        Assert.assertEquals("InventoryTest - validating setMilk: ", 5, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 2", 5, i.getMilk() );
     }
 
     @Test
@@ -325,9 +325,9 @@ public class InventoryTest {
     public void testSetMilkNegValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setMilk: ", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 1", default_inventory, i.getMilk() );
         i.setMilk(-3);
-        Assert.assertEquals("InventoryTest - validating setMilk: ", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 2", default_inventory, i.getMilk() );
     }
 
     @Test
@@ -337,9 +337,9 @@ public class InventoryTest {
     public void testSetMilkZeroValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setMilk: ", default_inventory, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 1", default_inventory, i.getMilk() );
         i.setMilk(0);
-        Assert.assertEquals("InventoryTest - validating setMilk: ", 0, i.getMilk() );
+        Assert.assertEquals("InventoryTest - validating setMilk: 2", 0, i.getMilk() );
     }
 
     /* addMilk Tests */
@@ -355,7 +355,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addMilk: ", default_inventory + 7, i.getMilk());
+            Assert.assertEquals("InventoryTest - validating addMilk: 1", default_inventory + 7, i.getMilk());
         }
     }
 
@@ -369,7 +369,7 @@ public class InventoryTest {
             i.addMilk("-7");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addMilk: ",
+            Assert.assertEquals("InventoryTest - validating addMilk: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -386,7 +386,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addMilk: ", default_inventory, i.getMilk());
+            Assert.assertEquals("InventoryTest - validating addMilk: 1", default_inventory, i.getMilk());
         }
     }
 
@@ -400,7 +400,7 @@ public class InventoryTest {
             i.addMilk("7.3");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addMilk: ",
+            Assert.assertEquals("InventoryTest - validating addMilk: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -415,7 +415,7 @@ public class InventoryTest {
             i.addMilk("Interesting");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addMilk: ",
+            Assert.assertEquals("InventoryTest - validating addMilk: 1",
                     "Units of milk must be a positive integer", e.getMessage());
         }
     }
@@ -428,7 +428,7 @@ public class InventoryTest {
     public void testGetSugar() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating getSugar: ", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating getSugar: 1", default_inventory, i.getSugar() );
     }
 
     /* setSugar Tests */
@@ -439,9 +439,9 @@ public class InventoryTest {
     public void testSetSugarPosValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setSugar: ", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 1", default_inventory, i.getSugar() );
         i.setSugar(5);
-        Assert.assertEquals("InventoryTest - validating setSugar: ", 5, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 2", 5, i.getSugar() );
     }
 
     @Test
@@ -451,9 +451,9 @@ public class InventoryTest {
     public void testSetSugarNegValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setSugar: ", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 1", default_inventory, i.getSugar() );
         i.setSugar(-3);
-        Assert.assertEquals("InventoryTest - validating setSugar: ", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 2", default_inventory, i.getSugar() );
     }
 
     @Test
@@ -463,9 +463,9 @@ public class InventoryTest {
     public void testSetSugarZeroValue() {
         Inventory i= new Inventory();
 
-        Assert.assertEquals("InventoryTest - validating setSugar: ", default_inventory, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 1", default_inventory, i.getSugar() );
         i.setSugar(0);
-        Assert.assertEquals("InventoryTest - validating setSugar: ", 0, i.getSugar() );
+        Assert.assertEquals("InventoryTest - validating setSugar: 2", 0, i.getSugar() );
     }
 
     /* addSugar Tests */
@@ -481,7 +481,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addSugar: ", default_inventory + 7, i.getSugar());
+            Assert.assertEquals("InventoryTest - validating addSugar: 1", default_inventory + 7, i.getSugar());
         }
     }
 
@@ -495,7 +495,7 @@ public class InventoryTest {
             i.addSugar("-7");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addSugar: ",
+            Assert.assertEquals("InventoryTest - validating addSugar: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -512,7 +512,7 @@ public class InventoryTest {
             System.out.println(e.getMessage());
             Assert.fail("Exception was thrown!");
         } finally {
-            Assert.assertEquals("InventoryTest - validating addSugar: ", default_inventory, i.getSugar());
+            Assert.assertEquals("InventoryTest - validating addSugar: 1", default_inventory, i.getSugar());
         }
     }
 
@@ -526,7 +526,7 @@ public class InventoryTest {
             i.addSugar("7.3");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addSugar: ",
+            Assert.assertEquals("InventoryTest - validating addSugar: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -541,7 +541,7 @@ public class InventoryTest {
             i.addSugar("Interesting");
             Assert.fail("No exception was thrown!");
         } catch (InventoryException e) {
-            Assert.assertEquals("InventoryTest - validating addSugar: ",
+            Assert.assertEquals("InventoryTest - validating addSugar: 1",
                     "Units of sugar must be a positive integer", e.getMessage());
         }
     }
@@ -553,7 +553,7 @@ public class InventoryTest {
      */
     public void testEnoughIngredientsTrue() {
         Inventory i = new Inventory();
-        Assert.assertTrue("InventoryTest - validating enoughIngredients (true): ", i.enoughIngredients(recipe));
+        Assert.assertTrue("InventoryTest - validating enoughIngredients (true): 1", i.enoughIngredients(recipe));
     }
 
     @Test
@@ -563,8 +563,8 @@ public class InventoryTest {
     public void testEnoughIngredientsNoCoffee() {
         Inventory i = new Inventory();
         i.setCoffee(0);
-        Assert.assertEquals("InventoryTest - validating enoughIngredients (no coffee): ", 0, i.getCoffee());
-        Assert.assertFalse("InventoryTest - validating enoughIngredients (no coffee): ", i.enoughIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating enoughIngredients (no coffee): 1", 0, i.getCoffee());
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (no coffee): 2", i.enoughIngredients(recipe));
     }
 
     @Test
@@ -574,8 +574,8 @@ public class InventoryTest {
     public void testEnoughIngredientsNoMilk() {
         Inventory i = new Inventory();
         i.setMilk(0);
-        Assert.assertEquals("InventoryTest - validating enoughIngredients (no milk): ", 0, i.getMilk());
-        Assert.assertFalse("InventoryTest - validating enoughIngredients (no milk): ", i.enoughIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating enoughIngredients (no milk): 1", 0, i.getMilk());
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (no milk): 2", i.enoughIngredients(recipe));
     }
 
     @Test
@@ -585,8 +585,8 @@ public class InventoryTest {
     public void testEnoughIngredientsNoSugar() {
         Inventory i = new Inventory();
         i.setSugar(0);
-        Assert.assertEquals("InventoryTest - validating enoughIngredients (no sugar): ", 0, i.getSugar());
-        Assert.assertFalse("InventoryTest - validating enoughIngredients (no sugar): ", i.enoughIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating enoughIngredients (no sugar): 1", 0, i.getSugar());
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (no sugar): 2", i.enoughIngredients(recipe));
     }
 
     @Test
@@ -596,8 +596,8 @@ public class InventoryTest {
     public void testEnoughIngredientsNoChocolate() {
         Inventory i = new Inventory();
         i.setChocolate(0);
-        Assert.assertEquals("InventoryTest - validating enoughIngredients (no chocolate): ", 0, i.getChocolate());
-        Assert.assertFalse("InventoryTest - validating enoughIngredients (no chocolate): ", i.enoughIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating enoughIngredients (no chocolate): 1", 0, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (no chocolate): 2", i.enoughIngredients(recipe));
     }
 
     @Test
@@ -606,7 +606,7 @@ public class InventoryTest {
      */
     public void testEnoughIngredientsNullRecipe() {
         Inventory i = new Inventory();
-        Assert.assertFalse("InventoryTest - validating enoughIngredients (null recipe): ", i.enoughIngredients(null));
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (null recipe): 1", i.enoughIngredients(null));
     }
 
     /* useIngredients Tests */
@@ -616,11 +616,11 @@ public class InventoryTest {
      */
     public void testUseIngredientsTrue() {
         Inventory i = new Inventory();
-        Assert.assertTrue("InventoryTest - validating useIngredients (true): ", i.useIngredients(recipe));
-        Assert.assertEquals("InventoryTest - validating useIngredients (true): ", default_inventory - recipe.getAmtCoffee(), i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (true): ", default_inventory - recipe.getAmtMilk(), i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (true): ", default_inventory - recipe.getAmtSugar(), i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (true): ", default_inventory - recipe.getAmtChocolate(), i.getChocolate());
+        Assert.assertTrue("InventoryTest - validating useIngredients (true): 1", i.useIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating useIngredients (true): 2", default_inventory - recipe.getAmtCoffee(), i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (true): 3", default_inventory - recipe.getAmtMilk(), i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (true): 4", default_inventory - recipe.getAmtSugar(), i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (true): 5", default_inventory - recipe.getAmtChocolate(), i.getChocolate());
     }
 
     @Test
@@ -630,11 +630,11 @@ public class InventoryTest {
     public void testUseIngredientsNoCoffee() {
         Inventory i = new Inventory();
         i.setCoffee(0);
-        Assert.assertFalse("InventoryTest - validating useIngredients (no coffee): ", i.useIngredients(recipe));
-        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): ", 0, i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): ", default_inventory, i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): ", default_inventory, i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): ", default_inventory, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating useIngredients (no coffee): 1", i.useIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): 2", 0, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): 3", default_inventory, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): 4", default_inventory, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no coffee): 5", default_inventory, i.getChocolate());
     }
 
     @Test
@@ -644,11 +644,11 @@ public class InventoryTest {
     public void testUseIngredientsNoMilk() {
         Inventory i = new Inventory();
         i.setMilk(0);
-        Assert.assertFalse("InventoryTest - validating useIngredients (no milk): ", i.useIngredients(recipe));
-        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): ", default_inventory, i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): ", 0, i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): ", default_inventory, i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): ", default_inventory, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating useIngredients (no milk): 1", i.useIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): 2", default_inventory, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): 3", 0, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): 4", default_inventory, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no milk): 5", default_inventory, i.getChocolate());
     }
 
     @Test
@@ -658,11 +658,11 @@ public class InventoryTest {
     public void testUseIngredientsNoSugar() {
         Inventory i = new Inventory();
         i.setSugar(0);
-        Assert.assertFalse("InventoryTest - validating useIngredients (no sugar): ", i.useIngredients(recipe));
-        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): ", default_inventory, i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): ", default_inventory, i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): ", 0, i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): ", default_inventory, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating useIngredients (no sugar): 1", i.useIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): 2", default_inventory, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): 3", default_inventory, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): 4", 0, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no sugar): 5", default_inventory, i.getChocolate());
     }
 
     @Test
@@ -672,11 +672,11 @@ public class InventoryTest {
     public void testUseIngredientsNoChocolate() {
         Inventory i = new Inventory();
         i.setChocolate(0);
-        Assert.assertFalse("InventoryTest - validating useIngredients (no chocolate): ", i.useIngredients(recipe));
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", 0, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating useIngredients (no chocolate): 1", i.useIngredients(recipe));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 2", default_inventory, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 3", default_inventory, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 4", default_inventory, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 5", 0, i.getChocolate());
     }
 
     @Test
@@ -685,11 +685,11 @@ public class InventoryTest {
      */
     public void testUseIngredientsNullRecipe() {
         Inventory i = new Inventory();
-        Assert.assertFalse("InventoryTest - validating useIngredients (no chocolate): ", i.useIngredients(null));
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getCoffee());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getMilk());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getSugar());
-        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getChocolate());
+        Assert.assertFalse("InventoryTest - validating useIngredients (no chocolate): 1", i.useIngredients(null));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 2", default_inventory, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 3", default_inventory, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 4", default_inventory, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): 5", default_inventory, i.getChocolate());
     }
 
     /* toString Tests */
@@ -700,6 +700,6 @@ public class InventoryTest {
     public void testToString() {
         String expectedString = "Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n";
         Inventory i = new Inventory();
-        Assert.assertEquals( "InventoryTest - validating toString: ", expectedString ,i.toString());
+        Assert.assertEquals( "InventoryTest - validating toString: 1", expectedString ,i.toString());
     }
 }
