@@ -192,22 +192,27 @@ public class Inventory {
      * @param r
      * @return boolean
      */
-    protected synchronized boolean enoughIngredients(Recipe r) {
-        boolean isEnough = true;
-        if(Inventory.coffee < r.getAmtCoffee()) {
-            isEnough = false;
-        }
-        if(Inventory.milk < r.getAmtMilk()) {
-            isEnough = false;
-        }
-        if(Inventory.sugar < r.getAmtSugar()) {
-            isEnough = false;
-        }
-        if(Inventory.chocolate < r.getAmtChocolate()) {
-            isEnough = false;
-        }
-        return isEnough;
-    }
+	protected synchronized boolean enoughIngredients(Recipe r) {
+		boolean isEnough = true;
+		if(r != null) {
+			if(Inventory.coffee < r.getAmtCoffee()) {
+				isEnough = false;
+			}
+			if(Inventory.milk < r.getAmtMilk()) {
+				isEnough = false;
+			}
+			if(Inventory.sugar < r.getAmtSugar()) {
+				isEnough = false;
+			}
+			if(Inventory.chocolate < r.getAmtChocolate()) {
+				isEnough = false;
+			}
+		} else {
+			isEnough = false;
+		}
+
+		return isEnough;
+	}
     
     /**
      * Removes the ingredients used to make the specified 

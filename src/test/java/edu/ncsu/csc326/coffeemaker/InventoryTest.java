@@ -600,6 +600,15 @@ public class InventoryTest {
         Assert.assertFalse("InventoryTest - validating enoughIngredients (no chocolate): ", i.enoughIngredients(recipe));
     }
 
+    @Test
+    /**
+     * Test if there are enough ingredients to make a null recipe. Assuming this would generate a false response.
+     */
+    public void testEnoughIngredientsNullRecipe() {
+        Inventory i = new Inventory();
+        Assert.assertFalse("InventoryTest - validating enoughIngredients (null recipe): ", i.enoughIngredients(null));
+    }
+
     /* useIngredients Tests */
     @Test
     /**
@@ -668,6 +677,19 @@ public class InventoryTest {
         Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getMilk());
         Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getSugar());
         Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", 0, i.getChocolate());
+    }
+
+    @Test
+    /**
+     * Test ingredients are not subtracted to make a null recipe. Assuming this would generate a false response.
+     */
+    public void testUseIngredientsNullRecipe() {
+        Inventory i = new Inventory();
+        Assert.assertFalse("InventoryTest - validating useIngredients (no chocolate): ", i.useIngredients(null));
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getCoffee());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getMilk());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getSugar());
+        Assert.assertEquals("InventoryTest - validating useIngredients (no chocolate): ", default_inventory, i.getChocolate());
     }
 
     /* toString Tests */
