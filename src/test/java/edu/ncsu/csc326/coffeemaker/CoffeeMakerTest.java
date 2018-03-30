@@ -1,7 +1,10 @@
 package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
-import junit.framework.TestCase;
+
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
  *
@@ -9,15 +12,16 @@ import junit.framework.TestCase;
  *
  * Unit tests for CoffeeMaker class.
  */
-public class CoffeeMakerTest extends TestCase {
+public class CoffeeMakerTest {
 
-    private CoffeeMaker cm;
-    private Recipe r1;
-    private Recipe r2;
-    private Recipe r3;
-    private Recipe r4;
+    private static CoffeeMaker cm;
+    private static Recipe r1;
+    private static Recipe r2;
+    private static Recipe r3;
+    private static Recipe r4;
 
-    protected void setUp() throws Exception {
+    @BeforeClass
+    public static void setUp() throws Exception {
         cm = new CoffeeMaker();
 
         //Set up for r1
@@ -55,30 +59,42 @@ public class CoffeeMakerTest extends TestCase {
         r4.setAmtMilk("1");
         r4.setAmtSugar("1");
         r4.setPrice("65");
-
-        super.setUp();
     }
 
-    public void testAddInventory() {
-        try {
-            cm.addInventory("4","7","0","9");
-        } catch (InventoryException e) {
-            fail("InventoryException should not be thrown");
+    /* Constructors Tests */
+    @Test
+    /**
+     * Test the default constructor to ensure that a default Inventory and RecipeBook are created.
+     */
+    public void testDefaultConstructor() {
+        String actualInventory = "Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n";
+        Assert.assertNotNull( "Constructor Test - validating not null: 1", cm);
+        Assert.assertEquals("Constructor Test - validating Inventory: 2", actualInventory, cm.checkInventory());
+        Assert.assertEquals("Constructor Test - validating RecipeBook: 3", 4, cm.getRecipes().length);
+        for (Recipe r: cm.getRecipes()) {
+            Assert.assertNull("RecipeBook - validating Constructor: 2", r);
         }
     }
 
-    public void testAddInventoryException() {
-        try {
-            cm.addInventory("4", "-1", "asdf", "3");
-            fail("InventoryException should be thrown");
-        } catch (InventoryException e) {
-            //success if thrown
-        }
+    /* checkInventory Tests */
+    @Test
+    /**
+     * Test adding inventory. This should be fundamentally the same as the test in the Inventory class so we'll combine some cases.
+     */
+    public void testCheckInventoryAddInventoryPosValues() {
+
     }
 
-    public void testMakeCoffee() {
-        cm.addRecipe(r1);
-        assertEquals(25, cm.makeCoffee(0, 75));
-    }
 
+    /* getRecipes Tests */
+
+    /* addRecipe Tests */
+
+    /* deleteRecipe Tests */
+
+    /* editRecipe Tests */
+
+    /* addInventory Tests */
+
+    /* makeCoffee Tests */
 }
