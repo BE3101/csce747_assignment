@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CSCE747,edu.ncsu.csc326.coffeemaker,RecipeBook,0,122,0,26,0,30,0,18,0,5
+CSCE747,edu.ncsu.csc326.coffeemaker,Inventory,0,263,0,28,0,91,0,30,0,16
+CSCE747,edu.ncsu.csc326.coffeemaker,Main,517,0,46,0,142,0,34,0,11,0
+CSCE747,edu.ncsu.csc326.coffeemaker,CoffeeMaker,66,17,6,0,17,6,8,3,5,3
+CSCE747,edu.ncsu.csc326.coffeemaker,Recipe,7,217,4,22,2,78,3,26,0,16
+CSCE747,edu.ncsu.csc326.coffeemaker.exceptions,InventoryException,0,4,0,0,0,2,0,1,0,1
+CSCE747,edu.ncsu.csc326.coffeemaker.exceptions,RecipeException,0,4,0,0,0,2,0,1,0,1
