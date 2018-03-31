@@ -16,7 +16,7 @@ public class RecipeBook {
 	
 	/**
 	 * Returns the recipe array.
-	 * @param
+	 * @param r
 	 * @return Recipe[]
 	 */
 	public synchronized Recipe[] getRecipes() {
@@ -55,14 +55,10 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String deleteRecipe(int recipeToDelete) {
-		if(recipeToDelete >=0 && recipeToDelete < recipeArray.length) {
-			if (recipeArray[recipeToDelete] != null) {
-				String recipeName = recipeArray[recipeToDelete].getName();
-				recipeArray[recipeToDelete] = null;
-				return recipeName;
-			} else {
-				return null;
-			}
+		if (recipeArray[recipeToDelete] != null) {
+			String recipeName = recipeArray[recipeToDelete].getName();
+			recipeArray[recipeToDelete] = new Recipe();
+			return recipeName;
 		} else {
 			return null;
 		}
@@ -76,17 +72,14 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
-        if(recipeToEdit >=0 && recipeToEdit < recipeArray.length && newRecipe != null) {
-            if (recipeArray[recipeToEdit] != null) {
-                String recipeName = recipeArray[recipeToEdit].getName();
-                //newRecipe.setName("");
-                recipeArray[recipeToEdit] = newRecipe;
-                return recipeName;
-            } else {
-                return null;
-            }
-        } else {
-            return null;
-        }
+		if (recipeArray[recipeToEdit] != null) {
+			String recipeName = recipeArray[recipeToEdit].getName();
+			newRecipe.setName("");
+			recipeArray[recipeToEdit] = newRecipe;
+			return recipeName;
+		} else {
+			return null;
+		}
 	}
+
 }
