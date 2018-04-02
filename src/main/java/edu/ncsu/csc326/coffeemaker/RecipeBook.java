@@ -41,7 +41,7 @@ public class RecipeBook {
 			for (int i = 0; i < recipeArray.length && !added; i++) {
 				if (recipeArray[i] == null) {
 					recipeArray[i] = r;
-					added = false;
+					added = true;
 				}
 			}
 		}
