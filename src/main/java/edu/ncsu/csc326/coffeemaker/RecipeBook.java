@@ -10,9 +10,13 @@ public class RecipeBook {
 	/**
 	 * Default constructor for a RecipeBook.
 	 */
-	public RecipeBook() {
-		recipeArray = new Recipe[NUM_RECIPES];
-	}
+//[Statement Modification]
+//Deleting the RecipeBook constructor at line 13 of RecipeBook.java
+//causes most tests to fail in RecipeBookTest.java because the 'recipeArray'
+//object is null; Thus it is not useful.
+//	public RecipeBook() {
+//		recipeArray = new Recipe[NUM_RECIPES];
+//	}
 	
 	/**
 	 * Returns the recipe array.
@@ -41,7 +45,8 @@ public class RecipeBook {
 			for (int i = 0; i < recipeArray.length && !added; i++) {
 				if (recipeArray[i] == null) {
 					recipeArray[i] = r;
-					added = false;
+                                        //was added = true;
+					added = false; //[Operand Modification - replace constant values]
 				}
 			}
 		}

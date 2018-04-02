@@ -53,6 +53,7 @@ public class Inventory {
      * @throws InventoryException
      */
     public synchronized void addChocolate(String chocolate) throws InventoryException {
+    	//int amtChocolate = 0; INVALID MUTANT
     	int amtChocolate = 0;
     	try {
     		amtChocolate = Integer.parseInt(chocolate);
@@ -121,7 +122,7 @@ public class Inventory {
      * @param milk
      */
     public synchronized void setMilk(int milk) {
-    	if(milk < 0) {
+    	if(milk < 0) { //[Expression Modification Operator]
     		Inventory.milk = milk;
     	}
     }

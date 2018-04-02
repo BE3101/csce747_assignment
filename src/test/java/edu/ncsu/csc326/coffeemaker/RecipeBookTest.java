@@ -685,4 +685,25 @@ public class RecipeBookTest {
         Assert.assertNull("RecipeBook - validating editRecipe: 6", testArray[2]);
         Assert.assertNull("RecipeBook - validating editRecipe: 7", testArray[3]);
     }
+    
+    @Test
+    public void testAddrecipe(){
+        	Recipe r = new Recipe();
+		CoffeeMaker coffeeMaker = new CoffeeMaker();
+                try{
+ 			r.setName("TEST");
+			r.setPrice("1");
+			r.setAmtCoffee("1");
+			r.setAmtMilk("1");
+			r.setAmtSugar("1");
+			r.setAmtChocolate("1");
+			
+			boolean recipeAdded = coffeeMaker.addRecipe(r);
+                        Assert.assertTrue("Failed to add recipe", recipeAdded);
+                }
+                catch (RecipeException e) {
+                      System.out.println(e.getMessage());
+                      Assert.fail("Exception was thrown!");
+        } 
+    }
 }

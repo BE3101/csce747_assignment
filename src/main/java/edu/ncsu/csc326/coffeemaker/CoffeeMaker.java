@@ -84,7 +84,8 @@ public class CoffeeMaker {
      * @return int
      */
     public synchronized int makeCoffee(int recipeToPurchase, int amtPaid) {
-        int change = 0;
+        //[Expression Modification]
+        int change = 999;
         
         if (getRecipes()[recipeToPurchase] == null) {
         	change = amtPaid;
