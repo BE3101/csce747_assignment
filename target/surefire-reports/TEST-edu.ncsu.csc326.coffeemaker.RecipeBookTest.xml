@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="0" name="edu.ncsu.csc326.coffeemaker.RecipeBookTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="19" failures="0" name="edu.ncsu.csc326.coffeemaker.RecipeBookTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib"/>
@@ -64,7 +64,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddRecipeToFullRBAfterDelete" time="0.005"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddRecipeToFullRBAfterDelete" time="0.004"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddRecipeToFullRB" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteNegRecipe" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testEditRecipeDoesExist" time="0"/>
@@ -73,14 +73,14 @@
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testEditRecipeDoesNotExist" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testEditRecipeNegIndex" time="0.001"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testEditFirstRecipe" time="0"/>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeFromEmptyRB" time="0"/>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeFromFullRB" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeFromEmptyRB" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeFromFullRB" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteAlreadyDeletedRecipeFromEmptyRB" time="0"/>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddRecipeToEmptyRB" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddRecipeToEmptyRB" time="0.001"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteFirstRecipe" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeDoesNotExist" time="0"/>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeExistsNotFull" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeExistsNotFull" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDefaultRecipeBookConstructor" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testAddDuplicateRecipeToRB" time="0"/>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeOutOfBounds" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.RecipeBookTest" name="testDeleteRecipeOutOfBounds" time="0"/>
 </testsuite>

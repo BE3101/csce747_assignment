@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="28" failures="0" name="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib"/>
@@ -64,6 +64,32 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testCheckInventoryAddInventoryPosValues" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeValidRecipeNegAmount" time="0.004"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeNegativeIndex" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeDuplicateRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeOOBIndex" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddRecipeNullRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddInventoryPosValues" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeNoRecipeToDelete" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddRecipeDuplicateRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeNoRecipeToDelete" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeNoRecipes" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeNullRecipeValidAmount" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeThreeRecipes" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeNegativeIndex" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeValidRecipeAndAmountNoIngredients" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeValidRecipeAndAmount" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddRecipeFiveRecipes" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeOOBRecipeValidAmount" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddInventoryNegValues" time="0.001"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeDuplicateRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeNullRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeThreeRecipes" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeNegRecipeValidAmount" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testMakeCoffeeValidRecipeAmountLow" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testAddRecipeThreeRecipes" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDeleteRecipeOOBIndex" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeNullRecipe" time="0"/>
+  <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testEditRecipeNoRecipes" time="0"/>
   <testcase classname="edu.ncsu.csc326.coffeemaker.CoffeeMakerTest" name="testDefaultConstructor" time="0"/>
 </testsuite>

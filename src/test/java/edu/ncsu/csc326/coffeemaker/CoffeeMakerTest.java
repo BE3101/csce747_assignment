@@ -2,6 +2,7 @@ package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -61,6 +62,14 @@ public class CoffeeMakerTest {
         r4.setPrice("65");
     }
 
+    @After
+    /**
+     *
+     */
+    public void resetCoffeeMaker() {
+        cm = new CoffeeMaker();
+    }
+
     /* Constructors Tests */
     @Test
     /**
@@ -76,25 +85,166 @@ public class CoffeeMakerTest {
         }
     }
 
-    /* checkInventory Tests */
+    /* addInventory / checkInventory Tests */
     @Test
     /**
      * Test adding inventory. This should be fundamentally the same as the test in the Inventory class so we'll combine some cases.
      */
-    public void testCheckInventoryAddInventoryPosValues() {
+    public void testAddInventoryPosValues() {
+        try {
+            cm.addInventory("9", "8", "7", "6");
+        } catch (InventoryException e) {
+            System.out.println(e.getMessage());
+            Assert.fail("Exception was thrown!");
+        } finally {
+            String actualInventory = "Coffee: 24\nMilk: 23\nSugar: 22\nChocolate: 21\n";
+            Assert.assertEquals("AddInventory Test - validating Inventory: 1", actualInventory, cm.checkInventory());
+        }
+    }
+
+    @Test
+    /**
+     * Test adding inventory. This should be fundamentally the same as the test in the Inventory class so we'll combine
+     * some cases. Note that the exception expected here enforce any consistency. It that's a requirement, we're in trouble.
+     */
+    public void testAddInventoryNegValues() {
+        try {
+            cm.addInventory("9", "8", "-7", "6");
+            Assert.fail("No exception was thrown!");
+        } catch (InventoryException e) {
+            Assert.assertEquals("AddInventory Test - validating Exception: 1",
+                    "Units of sugar must be a positive integer", e.getMessage());
+        } finally {
+            String actualInventory = "Coffee: 24\nMilk: 23\nSugar: 15\nChocolate: 15\n";
+            Assert.assertEquals("AddInventory Test - validating Inventory: 2", actualInventory, cm.checkInventory());
+        }
+    }
+
+    /* addRecipe and getRecipes Tests */
+    @Test
+    public void testAddRecipeThreeRecipes() {
 
     }
 
+    @Test
+    public void testAddRecipeDuplicateRecipe() {
 
-    /* getRecipes Tests */
+    }
 
-    /* addRecipe Tests */
+    @Test
+    public void testAddRecipeFiveRecipes() {
 
-    /* deleteRecipe Tests */
+    }
 
-    /* editRecipe Tests */
+    @Test
+    public void testAddRecipeNullRecipe() {
 
-    /* addInventory Tests */
+    }
 
+    /* deleteRecipe and getRecipes Tests */
+    @Test
+    public void testDeleteRecipeThreeRecipes() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeDuplicateRecipe() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeNoRecipes() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeNullRecipe() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeNoRecipeToDelete() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeNegativeIndex() {
+
+    }
+
+    @Test
+    public void testDeleteRecipeOOBIndex() {
+
+    }
+
+    /* editRecipe and getRecipes Tests */
+    @Test
+    public void testEditRecipeThreeRecipes() {
+
+    }
+
+    @Test
+    public void testEditRecipeDuplicateRecipe() {
+
+    }
+
+    @Test
+    public void testEditRecipeNoRecipes() {
+
+    }
+
+    @Test
+    public void testEditRecipeNullRecipe() {
+
+    }
+
+    @Test
+    public void testEditRecipeNoRecipeToDelete() {
+
+    }
+
+    @Test
+    public void testEditRecipeNegativeIndex() {
+
+    }
+
+    @Test
+    public void testEditRecipeOOBIndex() {
+
+    }
     /* makeCoffee Tests */
+    @Test
+    public void testMakeCoffeeValidRecipeAndAmount() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeValidRecipeAndAmountNoIngredients() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeValidRecipeAmountLow() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeValidRecipeNegAmount() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeOOBRecipeValidAmount() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeNullRecipeValidAmount() {
+
+    }
+
+    @Test
+    public void testMakeCoffeeNegRecipeValidAmount() {
+
+    }
 }
