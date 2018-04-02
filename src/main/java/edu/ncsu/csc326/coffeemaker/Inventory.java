@@ -121,7 +121,7 @@ public class Inventory {
      * @param milk
      */
     public synchronized void setMilk(int milk) {
-    	if(milk >= 0) {
+    	if(milk < 0) {
     		Inventory.milk = milk;
     	}
     }
