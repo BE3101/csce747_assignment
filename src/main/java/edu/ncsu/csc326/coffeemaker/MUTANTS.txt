@@ -1,0 +1,45 @@
+INVALID MUTANT 
+
+Remove line 56 from Inventory.java
+[sTATEMENT mODIFICATION]
+    public synchronized void addChocolate(String chocolate) throws InventoryException {
+    	//int amtChocolate = 0;
+    	try {
+
+
+VALID-BUT-NOT-USEFUL
+
+
+
+USEFUL
+[Expression Modification]
+Line 123 of Inventory.java (Caught)
+    public synchronized void setMilk(int milk) {
+    //milk >= 0	
+    if(milk < 0) {
+    		Inventory.milk = milk;
+    	}
+    }
+
+Line 40 of RecipeBook.java (Not Caught)
+[Operand Modification - replace constant values]
+Changed constant TRUE to FALSE	
+		if (!exists) {
+			for (int i = 0; i < recipeArray.length && !added; i++) {
+				if (recipeArray[i] == null) {
+					recipeArray[i] = r;
+                                        //was added = true;
+					added = false;
+				}
+			}
+		}
+
+
+
+
+
+
+EQUIVALENT 
+
+
+
