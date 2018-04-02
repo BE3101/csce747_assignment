@@ -120,67 +120,145 @@ public class CoffeeMakerTest {
         }
     }
 
-    /* addRecipe and getRecipes Tests */
     @Test
+    /**
+     * Test adding three recipes.
+     */
     public void testAddRecipeThreeRecipes() {
-
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        boolean bSuccess2 = cm.addRecipe(r2);
+        Assert.assertTrue(bSuccess2);
+        boolean bSuccess3 = cm.addRecipe(r3);
+        Assert.assertTrue(bSuccess3);
     }
 
     @Test
+    /**
+     * Test adding duplicate recipes.
+     */
     public void testAddRecipeDuplicateRecipe() {
-
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        boolean bSuccess2 = cm.addRecipe(r1);
+        Assert.assertFalse(bSuccess2);
     }
 
     @Test
+    /**
+     * Test adding five recipes. The array only supports four recipes.
+     */
     public void testAddRecipeFiveRecipes() {
-
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        boolean bSuccess2 = cm.addRecipe(r2);
+        Assert.assertTrue(bSuccess2);
+        boolean bSuccess3 = cm.addRecipe(r3);
+        Assert.assertTrue(bSuccess3);
+        boolean bSuccess4 = cm.addRecipe(r4);
+        Assert.assertTrue(bSuccess4);
+        boolean bSuccess5 = cm.addRecipe(new Recipe());
+        Assert.assertFalse(bSuccess5);
     }
 
     @Test
+    /**
+     * Test adding a null recipe.
+     */
     public void testAddRecipeNullRecipe() {
-
+        try {
+            boolean bSuccess = cm.addRecipe(null);
+            Assert.fail("No exception was thrown!");
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
     }
 
     /* deleteRecipe and getRecipes Tests */
     @Test
+    /**
+     * Test deleting four recipes.
+     */
     public void testDeleteRecipeThreeRecipes() {
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        boolean bSuccess2 = cm.addRecipe(r2);
+        Assert.assertTrue(bSuccess2);
+        boolean bSuccess3 = cm.addRecipe(r3);
+        Assert.assertTrue(bSuccess3);
+        boolean bSuccess4 = cm.addRecipe(r4);
+        Assert.assertTrue(bSuccess4);
 
+        String result1 = cm.deleteRecipe(1);
+        Assert.assertEquals("Mocha", result1);
+        String result2 = cm.deleteRecipe(2);
+        Assert.assertEquals("Latte", result2);
+        String result3 = cm.deleteRecipe(3);
+        Assert.assertEquals("Hot Chocolate", result3);
     }
 
     @Test
+    /**
+     * Test deleting four recipes.
+     */
     public void testDeleteRecipeDuplicateRecipe() {
-
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        String result1 = cm.deleteRecipe(0);
+        Assert.assertEquals("Coffee", result1);
+        String result2 = cm.deleteRecipe(0);
+        Assert.assertNull(result2);
     }
 
     @Test
+    /**
+     * Test deleting recipe where the array is empty.
+     */
     public void testDeleteRecipeNoRecipes() {
-
+        String result = cm.deleteRecipe(0);
+        Assert.assertNull(result);
     }
 
     @Test
-    public void testDeleteRecipeNullRecipe() {
-
-    }
-
-    @Test
-    public void testDeleteRecipeNoRecipeToDelete() {
-
-    }
-
-    @Test
+    /**
+     * Test deleting recipe with negative index value.
+     */
     public void testDeleteRecipeNegativeIndex() {
-
+        String result = cm.deleteRecipe(-1);
+        Assert.assertNull(result);
     }
 
     @Test
+    /**
+     * Test deleting recipe with index value outside arrayrange.
+     */
     public void testDeleteRecipeOOBIndex() {
-
+        String result = cm.deleteRecipe(254);
+        Assert.assertNull(result);
     }
 
-    /* editRecipe and getRecipes Tests */
     @Test
+    /**
+     * Test editing three recipe.
+     */
     public void testEditRecipeThreeRecipes() {
+        boolean bSuccess1 = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess1);
+        Recipe recipe1 = cm.getRecipes()[0];
+        Assert.assertNotNull(recipe1);
+        try
+        {
+            recipe1.setAmtCoffee("4");
+        }
+        catch(Exception e) {
+            Assert.fail("An exception was thrown!");
+        }
+        cm.editRecipe(0, recipe1);
+        Assert.assertEquals(4, cm.getRecipes()[0].getAmtCoffee());
 
+        boolean bSuccess2 = cm.addRecipe(r2);
+        Assert.assertTrue(bSuccess2);
+        boolean bSuccess3 = cm.addRecipe(r3);
     }
 
     @Test
@@ -212,20 +290,63 @@ public class CoffeeMakerTest {
     public void testEditRecipeOOBIndex() {
 
     }
-    /* makeCoffee Tests */
+
     @Test
+    /**
+     * Test making coffee happy path.
+     */
     public void testMakeCoffeeValidRecipeAndAmount() {
-
+        try
+        {
+            r1.setAmtCoffee("3");
+        }
+        catch(Exception e){
+            Assert.fail("An exception was thrown!");
+        }
+        boolean bSuccess = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess);
+        int change = cm.makeCoffee(0, 50);
+        Assert.assertEquals(0, change);
     }
 
     @Test
+    /**
+     * Test making coffee without enough money
+     */
+    public void testMakeCoffeeNotEnoughMoney() {
+        boolean bSuccess = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess);
+        int change = cm.makeCoffee(0, 20);
+        Assert.assertEquals(20, change);
+    }
+
+    @Test
+    /**
+     * Test making coffee where there aren't enough ingredients.
+     */
     public void testMakeCoffeeValidRecipeAndAmountNoIngredients() {
+        try
+        {
+            r1.setAmtCoffee("100");
+        }
+        catch(Exception e){
+            Assert.fail("An exception was thrown!");
+        }
+        boolean bSuccess = cm.addRecipe(r1);
+        Assert.assertTrue(bSuccess);
 
+        int change1 = cm.makeCoffee(0, 50);
+        Assert.assertEquals(50, change1);
     }
 
     @Test
-    public void testMakeCoffeeValidRecipeAmountLow() {
-
+    /**
+     * Test making coffee when recipe is null
+     */
+    public void testMakeCoffeesInvalidRecipe() {
+        cm.getRecipes()[0] = null;
+        int change1 = cm.makeCoffee(0, 50);
+        Assert.assertEquals(50, change1);
     }
 
     @Test
