@@ -122,7 +122,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test adding three recipes.
+     * Add three recipes. Make sure they all are present.
      */
     public void testAddRecipeThreeRecipes() {
         boolean bSuccess1 = cm.addRecipe(r1);
@@ -146,7 +146,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test adding five recipes. The array only supports four recipes.
+     * Test adding five recipes. The array only supports four recipes. Make sure the fifth isn't successful
      */
     public void testAddRecipeFiveRecipes() {
         boolean bSuccess1 = cm.addRecipe(r1);
@@ -163,7 +163,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test adding a null recipe.
+     * Test adding a null recipe. Make sure adding a null recipe fails by throwing an exception
      */
     public void testAddRecipeNullRecipe() {
         try {
@@ -177,7 +177,7 @@ public class CoffeeMakerTest {
     /* deleteRecipe and getRecipes Tests */
     @Test
     /**
-     * Test deleting four recipes.
+     * Test deleting three recipes.  Make sure after adding four recipes can delete all but one.
      */
     public void testDeleteRecipeThreeRecipes() {
         boolean bSuccess1 = cm.addRecipe(r1);
@@ -199,7 +199,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test deleting four recipes.
+     * Make sure when you delete a recipe that attempting to delete the same recipe again doesn't succeed.
      */
     public void testDeleteRecipeDuplicateRecipe() {
         boolean bSuccess1 = cm.addRecipe(r1);
@@ -212,7 +212,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test deleting recipe where the array is empty.
+     * Test deleting recipe where the array is empty. Make sure when attempting to delete a recipe from an empty list that the method returns null.
      */
     public void testDeleteRecipeNoRecipes() {
         String result = cm.deleteRecipe(0);
@@ -221,7 +221,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test deleting recipe with negative index value.
+     * Test deleting recipe with negative index value. Make sure the method is capable of handling negative index values.
      */
     public void testDeleteRecipeNegativeIndex() {
         String result = cm.deleteRecipe(-1);
@@ -230,7 +230,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test deleting recipe with index value outside arrayrange.
+     * Test deleting recipe with index value outside arrayrange. Test deleting recipes out of bounds. They should return null just like deleting a recipe that doesn't exist.
      */
     public void testDeleteRecipeOOBIndex() {
         String result = cm.deleteRecipe(254);
@@ -239,7 +239,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test editing three recipe.
+     * Test editing three recipes. Make sure updated values persist.
      */
     public void testEditRecipeThreeRecipes() {
         boolean bSuccess1 = cm.addRecipe(r1);
@@ -293,7 +293,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test making coffee happy path.
+     * Test making coffee happy path, valid recipe and exact amount of money. Method should return the amount of change, 0 in this case.
      */
     public void testMakeCoffeeValidRecipeAndAmount() {
         try
@@ -311,7 +311,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test making coffee without enough money
+     * Test making coffee with a valid recipe and not enough money. Method should return the amount the passed in.
      */
     public void testMakeCoffeeNotEnoughMoney() {
         boolean bSuccess = cm.addRecipe(r1);
@@ -322,7 +322,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test making coffee where there aren't enough ingredients.
+     * Test making coffee with a valid recipe and amount but not enough ingredients. Method should return the amount the passed in.
      */
     public void testMakeCoffeeValidRecipeAndAmountNoIngredients() {
         try
@@ -341,7 +341,7 @@ public class CoffeeMakerTest {
 
     @Test
     /**
-     * Test making coffee when recipe is null
+     * Test making coffee when the recipe is invalid (null). Method should return the amount the passed in.
      */
     public void testMakeCoffeesInvalidRecipe() {
         cm.getRecipes()[0] = null;
