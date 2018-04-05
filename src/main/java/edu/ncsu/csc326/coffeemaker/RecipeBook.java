@@ -14,9 +14,9 @@ public class RecipeBook {
 //Deleting the RecipeBook constructor at line 13 of RecipeBook.java
 //causes most tests to fail in RecipeBookTest.java because the 'recipeArray'
 //object is null; Thus it is not useful.
-//	public RecipeBook() {
-//		recipeArray = new Recipe[NUM_RECIPES];
-//	}
+	public RecipeBook() {
+		recipeArray = new Recipe[NUM_RECIPES];
+	}
 	
 	/**
 	 * Returns the recipe array.
@@ -62,7 +62,7 @@ public class RecipeBook {
 	public synchronized String deleteRecipe(int recipeToDelete) {
 		if (recipeArray[recipeToDelete] != null) {
 			String recipeName = recipeArray[recipeToDelete].getName();
-			recipeArray[recipeToDelete] = new Recipe();
+			//recipeArray[recipeToDelete] = new Recipe();
 			return recipeName;
 		} else {
 			return null;

@@ -35,4 +35,4 @@ EQUIVALENT
 [Expression Modification]
 Line 88 of CoffeeMaker.java 
 Setting 'change' to 999 instead of 0 has no effect 
-since 'change' is immediately overwritten
+since 'change' is immediately overwritten and not detected.
